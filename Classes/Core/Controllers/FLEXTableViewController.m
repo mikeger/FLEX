@@ -330,11 +330,11 @@ CGFloat const kFLEXDebounceForExpensiveIO = 0.5;
         self.openTabsToolbarItem,
     ];
     
-    for (UIBarButtonItem *item in self.toolbarItems) {
-        [item _setWidth:60];
-        // This does not work for anything but fixed spaces for some reason
-        // item.width = 60;
-    }
+//    for (UIBarButtonItem *item in self.toolbarItems) {
+//        [item performSelector:@selector(_setWidth:) withObject:@(60)];
+//        // This does not work for anything but fixed spaces for some reason
+//        // item.width = 60;
+//    }
     
     // Disable tabs entirely when not presented by FLEXExplorerViewController
     UIViewController *presenter = self.navigationController.presentingViewController;
